@@ -1,7 +1,7 @@
 export default function IndexPage() {
   return (
     <>
-      <p>hello retard</p>
+      <h1>Hi. I'm a fronte end engeineer. SLC -> Chicago, Il. </h1>
     </>
   );
 }
