@@ -1,4 +1,4 @@
-import { JobStyles } from './Resume/ResumeStyles';
+import { JobStyles } from './Resume/styles';
 
 export default function Job({ resume }) {
   return (

@@ -65,6 +65,7 @@ const InnerStyles = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
   padding: 2rem;
+  overflow: hidden;
 `;
 
 export default function Page({ children, cool }) {

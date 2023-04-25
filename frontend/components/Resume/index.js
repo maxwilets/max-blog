@@ -2,13 +2,14 @@ import gql from 'graphql-tag';
 import { useQuery } from '@apollo/client';
 import DisplayError from '../ErrorMessage';
 import H3Style from '../styles/Typography';
-import { JobWrapper, ResumeStyles } from './ResumeStyles';
+import { JobWrapper, ResumeStyles } from './styles';
 import Job from '../Job';
 import YearSpacer from '../YearSpacer';
+import { Briefcase } from '../../icons/Briefcase';
 
 export const ALL_JOBS_QUERY = gql`
   query ALL_JOBS_QUERY {
-    allResumes {
+    allResumes(sortBy: startYear_DESC) {
       id
       title
       company
@@ -29,6 +30,9 @@ export default function Resume() {
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
   const { allResumes } = data;
+  console.log(allResumes);
+
+  // console.log(allResumesSorted);
 
   return (
     <>
@@ -36,7 +40,12 @@ export default function Resume() {
 
       <ResumeStyles>
         <section className="jobSection">
-          <H3Style>Work History</H3Style>
+          <section className="headers">
+            <H3Style>Work History</H3Style>
+            <span className="yearHeader">
+              <Briefcase />
+            </span>
+          </section>
           {allResumes.map((resume) => (
             <JobWrapper>
               <YearSpacer

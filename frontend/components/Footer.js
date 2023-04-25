@@ -6,6 +6,7 @@ const StyledFooter = styled.footer`
   margin: auto;
   padding: 1.25rem 0;
   color: var(--offWhite);
+  z-index: 2;
   .footer-wrapper {
     max-width: 1000px;
     margin: auto;
@@ -23,7 +24,7 @@ export default function Footer() {
         {' '}
         <p className="footer-logo">Max Wilets &copy;2023</p>
         <span>
-          Made with
+          Made with{' '}
           <Link href="https://nextjs.org/" target="_blank">
             Next.js
           </Link>{' '}
