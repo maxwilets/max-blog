@@ -42,6 +42,20 @@ const GlobalStyles = createGlobalStyle`
   a:hover {
     text-decoration: underline;
   }
+
+  h4 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    margin-top: 8px;
+  }
+
+
+  h5 { font-size: 1.9rem; margin-bottom: 16px; margin-top: 0; }
+
+  ul {
+    padding-left: 16px;
+  }
+
   button {
     font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }

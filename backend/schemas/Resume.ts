@@ -7,6 +7,7 @@ export const Resume = list({
     company: text({ isRequired: true }),
     date: text({ isRequired: true }),
     startYear: integer(),
+    endYear: integer(),
     role1: text({ isRequired: true, ui: { displayMode: 'textarea' } }),
     role2: text({ isRequired: false, ui: { displayMode: 'textarea' } }),
     role3: text({ isRequired: false, ui: { displayMode: 'textarea' } }),
