@@ -7,8 +7,8 @@ import {
   statelessSessions,
 } from '@keystone-next/keystone/session';
 import { User } from './schemas/User';
-import { ProductImage } from './schemas/ProductImage';
-import { Product } from './schemas/Products';
+import { Resume } from './schemas/Resume';
+import { Skill } from './schemas/Skills';
 import { insertSeedData } from './seed-data';
 
 const databaseUrl =
@@ -55,8 +55,8 @@ export default withAuth(
       },
       lists: createSchema({
         User,
-        Product,
-        ProductImage,
+        Resume,
+        Skill,
       }),
       ui: {
         isAccessAllowed: ({ session }) => !!session?.data,
