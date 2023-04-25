@@ -6,6 +6,7 @@ import { JobWrapper, ResumeStyles } from './styles';
 import Job from '../Job';
 import YearSpacer from '../YearSpacer';
 import { Briefcase } from '../../icons/Briefcase';
+import Skills from '../Skills';
 
 export const ALL_JOBS_QUERY = gql`
   query ALL_JOBS_QUERY {
@@ -47,14 +48,15 @@ export default function Resume() {
             </span>
           </section>
           {allResumes.map((resume) => (
-            <JobWrapper>
+            <JobWrapper key={resume.id}>
               <YearSpacer
                 years={resume.endYear ? resume.endYear : resume.startYear}
               />
-              <Job key={resume.id} resume={resume} />
+              <Job resume={resume} />
             </JobWrapper>
           ))}
         </section>
+        <Skills />
       </ResumeStyles>
     </>
   );

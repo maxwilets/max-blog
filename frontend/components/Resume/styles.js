@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 const ResumeStyles = styled.div`
-  max-width: 75%;
   display: flex;
   flex-direction: row;
+
+  .jobSection {
+    max-width: 65%;
+  }
 
   .headers {
     display: flex;
@@ -13,7 +16,7 @@ const ResumeStyles = styled.div`
     }
   }
   .yearHeader {
-    background-color: var(--offWhite);
+    background-color: #fff;
     height: fit-content;
     text-align: center;
     padding: 15px 20px;
@@ -22,11 +25,12 @@ const ResumeStyles = styled.div`
     border-radius: 50%;
     border: 2px solid #000;
     position: relative;
+    box-shadow: var(--bs);
 
     &:after {
       content: ' ';
       height: 100%;
-      top: 101%;
+      top: 101.5%;
       left: 47%;
       width: 3px;
       background-color: var(--lightGray);

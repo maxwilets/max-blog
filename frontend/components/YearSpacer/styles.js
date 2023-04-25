@@ -34,6 +34,7 @@ const YearSpacerStyles = styled.div`
     top: 47.5%;
     z-index: 2;
     border-radius: 50%;
+    box-shadow: var(--bs);
   }
 `;
 
