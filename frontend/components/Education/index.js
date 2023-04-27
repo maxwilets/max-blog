@@ -22,7 +22,6 @@ export default function Eductation() {
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
   const { allEducations: schools } = data;
-  console.log(schools);
   return (
     <EductationStyles>
       <H3Style>Education</H3Style>

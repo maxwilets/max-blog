@@ -29,14 +29,13 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:--apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
     line-height:2;
   }
   a {
-    text-decoration: none;
     color: var(--black);
   }
   a:hover {
@@ -59,6 +58,9 @@ const GlobalStyles = createGlobalStyle`
   button {
     font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
+
+  p { font-weight: 300; }
+  li { font-weight: 300;}
 `;
 
 const InnerStyles = styled.div`

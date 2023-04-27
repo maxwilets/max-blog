@@ -10,14 +10,14 @@ export const cloudinary = {
   folder: 'sickfits',
 };
 
-export const ProductImage = list({
+export const CourseImage = list({
   fields: {
     image: cloudinaryImage({
       cloudinary,
       label: 'Source',
     }),
     altText: text(),
-    product: relationship({ ref: 'Product.photo' }),
+    product: relationship({ ref: 'Coursework.photo' }),
   },
   ui: {
     listView: {

@@ -17,6 +17,7 @@ export const SkillStyles = styled.div`
     height: 20px;
     position: relative;
     padding-right: 10px;
+    
     span {
       position: absolute;
       left: ${(props) => props.$level}%;
@@ -31,4 +32,5 @@ export const SkillStyles = styled.div`
       top: -5px;
     }
   }
+  p { margin-bottom: 5px; }
 `;
