@@ -10,6 +10,7 @@ import { User } from './schemas/User';
 import { Resume } from './schemas/Resume';
 import { Skill } from './schemas/Skills';
 import { insertSeedData } from './seed-data';
+import { Education } from './schemas/Education';
 
 const databaseUrl =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-sick-fits-tutorial';
@@ -57,6 +58,7 @@ export default withAuth(
         User,
         Resume,
         Skill,
+        Education,
       }),
       ui: {
         isAccessAllowed: ({ session }) => !!session?.data,

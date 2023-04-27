@@ -15,6 +15,7 @@ const ResumeStyles = styled.div`
       margin-left: 10px;
     }
   }
+
   .yearHeader {
     background-color: #fff;
     height: fit-content;
@@ -26,6 +27,10 @@ const ResumeStyles = styled.div`
     border: 2px solid #000;
     position: relative;
     box-shadow: var(--bs);
+
+    @media (max-width: 960px) {
+      display: none;
+    }
 
     &:after {
       content: ' ';

@@ -22,11 +22,11 @@ export default function Skills() {
   const { allSkills } = data;
   console.log(allSkills);
   return (
-    <SkillsSyles>
+    <>
       <H3Style>Skills</H3Style>
       {allSkills.map((skill) => (
         <Skill key={skill.id} skill={skill} />
       ))}
-    </SkillsSyles>
+    </>
   );
 }

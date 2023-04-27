@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 const YearSpacerStyles = styled.div`
-  height: 100;
   position: relative;
+
+  @media (max-width: 960px) {
+    display: none !important;
+  }
   &:before {
     content: ' ';
     height: 43%;

@@ -7,6 +7,9 @@ import Job from '../Job';
 import YearSpacer from '../YearSpacer';
 import { Briefcase } from '../../icons/Briefcase';
 import Skills from '../Skills';
+import Eductation from '../Education';
+import { RightSection } from '../styles/RightSection';
+import Coursework from '../Coursework';
 
 export const ALL_JOBS_QUERY = gql`
   query ALL_JOBS_QUERY {
@@ -56,7 +59,11 @@ export default function Resume() {
             </JobWrapper>
           ))}
         </section>
-        <Skills />
+        <RightSection>
+          <Skills />
+          <Eductation />
+          <Coursework />
+        </RightSection>
       </ResumeStyles>
     </>
   );

@@ -11,15 +11,19 @@ export const SkillStyles = styled.div`
       rgba(236, 222, 36, 0.7973564425770308) 72%,
       rgba(0, 255, 1, 1) 100%
     );
+    background-width: 
     border-radius: 5px;
     display: block;
     height: 20px;
     position: relative;
+    padding-right: 10px;
     span {
       position: absolute;
       left: ${(props) => props.$level}%;
       color: #000;
       border-radius: 50%;
+      background-color: #fff;
+      opacity: .6;
       height: 30px;
       border: 1px solid #000;
       padding-left: 5px;
