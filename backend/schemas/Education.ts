@@ -7,5 +7,14 @@ export const Education = list({
     title: text({ isRequired: true }),
     location: text({ isRequired: true }),
     time: text({ isRequired: true }),
+    photo: relationship({
+      ref: 'SchoolLogo.product',
+      ui: {
+        displayMode: 'cards',
+        cardFields: ['image', 'altText'],
+        inlineCreate: { fields: ['image', 'altText'] },
+        inlineEdit: { fields: ['image', 'altText'] },
+      },
+    }),
   },
 });

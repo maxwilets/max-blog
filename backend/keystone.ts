@@ -13,6 +13,9 @@ import { insertSeedData } from './seed-data';
 import { Education } from './schemas/Education';
 import { Coursework } from './schemas/Coursework';
 import { CourseImage } from './schemas/CourseImage';
+import { SchoolLogo } from './schemas/SchoolLogo';
+import { Portfolio } from './schemas/Portfolio';
+import { Technology } from './schemas/Technologies';
 
 const databaseUrl =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-sick-fits-tutorial';
@@ -63,6 +66,9 @@ export default withAuth(
         Education,
         Coursework,
         CourseImage,
+        SchoolLogo,
+        Portfolio,
+        Technology,
       }),
       ui: {
         isAccessAllowed: ({ session }) => !!session?.data,

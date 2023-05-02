@@ -27,6 +27,7 @@ const YearSpacerStyles = styled.div`
     top: 5.5%;
     left: 25%;
     z-index: 1;
+    overflow-y: hidden;
   }
   p {
     background-color: var(--gray);

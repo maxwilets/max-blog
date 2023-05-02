@@ -2,17 +2,10 @@ import styled from 'styled-components';
 
 export const SkillStyles = styled.div`
   .colorDial {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(121, 9, 35, 1) 19%,
-      rgba(223, 113, 32, 1) 47%,
-      rgba(236, 222, 36, 0.7973564425770308) 72%,
-      rgba(0, 255, 1, 1) 100%
-    );
+    background: rgb(128,5,18);
+    background: linear-gradient(90deg, rgba(128,5,18,1) 0%, rgba(121,9,35,1) 10%, rgba(223,113,32,1) 50%, rgba(42,26,246,1) 100%);
     background-width: 
-    border-radius: 5px;
+    border-radius: 20px;
     display: block;
     height: 20px;
     position: relative;
@@ -32,5 +25,5 @@ export const SkillStyles = styled.div`
       top: -5px;
     }
   }
-  p { margin-bottom: 5px; }
+  p { margin-bottom: 5px; margin-top: 5px; font-size: 12px; }
 `;

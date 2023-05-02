@@ -13,6 +13,13 @@ export const ALL_SCHOOLS_QUERY = gql`
       location
       time
       title
+      photo {
+        id
+        altText
+        image {
+          publicUrlTransformed
+        }
+      }
     }
   }
 `;

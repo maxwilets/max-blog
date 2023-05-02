@@ -36,11 +36,9 @@ export default function Resume() {
   const { allResumes } = data;
   console.log(allResumes);
 
-  // console.log(allResumesSorted);
-
   return (
     <>
-      <h2>Resume</h2>
+      <h1>Resume</h1>
 
       <ResumeStyles>
         <section className="jobSection">
@@ -58,6 +56,7 @@ export default function Resume() {
               <Job resume={resume} />
             </JobWrapper>
           ))}
+          <section className="bottomSpacer" />
         </section>
         <RightSection>
           <Skills />

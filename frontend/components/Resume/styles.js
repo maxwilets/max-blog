@@ -1,11 +1,26 @@
 import styled from 'styled-components';
+import { Devices } from '../Devices';
 
+console.log(Devices.tablet);
 const ResumeStyles = styled.div`
   display: flex;
   flex-direction: row;
 
+  @media ${Devices.tablet} {
+    flex-direction: column !important;
+    .job-section {
+      max-width: 90%;
+      margin: auto;
+    }
+  }
+
   .jobSection {
-    max-width: 65%;
+    max-width: 60%;
+
+    @media ${Devices.tablet} {
+      max-width: 90%;
+      margin: auto;
+    }
   }
 
   .headers {
@@ -14,6 +29,19 @@ const ResumeStyles = styled.div`
     h3 {
       margin-left: 10px;
     }
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  .large {
+    font-size: 18px;
+    font-weight: 600;
   }
 
   .yearHeader {
@@ -35,8 +63,8 @@ const ResumeStyles = styled.div`
     &:after {
       content: ' ';
       height: 100%;
-      top: 101.5%;
-      left: 47%;
+      top: 102.5%;
+      left: 46%;
       width: 3px;
       background-color: var(--lightGray);
       position: absolute;
@@ -44,6 +72,18 @@ const ResumeStyles = styled.div`
 
     svg {
       vertical-align: bottom;
+    }
+  }
+  .bottomSpacer {
+    width: 100%;
+    height: 12px;
+    background-color: var(--gray);
+    transform: translateY(20px);
+    z-index: 2;
+    position: relative;
+
+    @media ${Devices.laptop} {
+      display: none;
     }
   }
 `;
