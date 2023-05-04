@@ -18,6 +18,7 @@ export const SchoolLogo = list({
     }),
     altText: text(),
     product: relationship({ ref: 'Education.photo' }),
+    project: relationship({ ref: 'Portfolio.photo' }),
   },
   ui: {
     listView: {

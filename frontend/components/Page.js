@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from './Header';
 import Footer from './footer';
+import Connect from './Connect';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -61,6 +62,35 @@ const GlobalStyles = createGlobalStyle`
 
   p { font-weight: 300; }
   li { font-weight: 300;}
+
+    .imageConatiner {
+    color: var(--gray);
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    border: 2px solid var(--gray);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
+  .connectHeader {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 2.8rem;
+    position: relative;
+    display: inline-block;
+    right: -1%;
+    width: 95%;
+    &:after {
+      position: absolute;
+      content: '  ';
+      width: 90%;
+      top: 50%;
+      right: 0;
+      height: 1px;
+      background-color: var(--lightGray);
+    }
+  }
 `;
 
 const InnerStyles = styled.div`
@@ -76,6 +106,7 @@ export default function Page({ children, cool }) {
       <GlobalStyles />
       <Header />
       <InnerStyles>{children}</InnerStyles>
+      <Connect />
       <Footer />
     </div>
   );

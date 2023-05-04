@@ -7,15 +7,15 @@ export const Portfolio = list({
     p1: text(),
     p2: text(),
     p3: text(),
-    // photo: relationship({
-    //   ref: 'SchoolLogo.product',
-    //   ui: {
-    //     displayMode: 'cards',
-    //     cardFields: ['image', 'altText'],
-    //     inlineCreate: { fields: ['image', 'altText'] },
-    //     inlineEdit: { fields: ['image', 'altText'] },
-    //   },
-    // }),
+    photo: relationship({
+      ref: 'SchoolLogo.project',
+      ui: {
+        displayMode: 'cards',
+        cardFields: ['image', 'altText'],
+        inlineCreate: { fields: ['image', 'altText'] },
+        inlineEdit: { fields: ['image', 'altText'] },
+      },
+    }),
     technologies: relationship({
       ref: 'Technology.product',
       many: true,
