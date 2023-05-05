@@ -4,20 +4,27 @@ import { RotateStyles } from './styles';
 export default function RoateWords() {
   const [activeIndex, updateActiveIndex] = useState(0);
   const [initialLoad, updateInitialLoad] = useState(true);
+
   useEffect(() => {
-    setInterval(() => {
-      activeIndex === 4
-        ? updateActiveIndex(0)
-        : updateActiveIndex(activeIndex + 1);
-      updateInitialLoad(false);
-    }, 5000);
-  });
+    const interval = setInterval(
+      () => (
+        activeIndex === 4
+          ? updateActiveIndex(0)
+          : updateActiveIndex(activeIndex + 1),
+        updateInitialLoad(false)
+      ),
+      5000
+    );
+    return () => clearInterval(interval);
+  }, [activeIndex]);
   return (
     <RotateStyles>
       <span className="rotate-words">
         Hi. I'm&nbsp;
         <span
           className={
+            // double tertiary to check state to add active
+            // fading or no class for animation
             activeIndex === 0
               ? 'active'
               : activeIndex === 1 && !initialLoad
@@ -30,6 +37,8 @@ export default function RoateWords() {
         </span>
         <span
           className={
+            // double tertiary to check state to add active
+            // fading or no class for animation
             activeIndex === 1
               ? 'active'
               : activeIndex === 2 && !initialLoad
@@ -42,6 +51,8 @@ export default function RoateWords() {
         </span>
         <span
           className={
+            // double tertiary to check state to add active
+            // fading or no class for animation
             activeIndex === 2
               ? 'active'
               : activeIndex === 3 && !initialLoad
@@ -54,6 +65,8 @@ export default function RoateWords() {
         </span>
         <span
           className={
+            // double tertiary to check state to add active
+            // fading or no class for animation
             activeIndex === 3
               ? 'active'
               : activeIndex === 4 && !initialLoad

@@ -8,4 +8,18 @@ export const ServicesStyles = styled.div`
   .header {
     width: 100%;
   }
+
+  .servicesBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .servicesCard {
+    width: 30%;
+    text-align: center;
+    background-color: var(--offWhite);
+    border: 1px solid var(--lightGray);
+    box-shadow: var(--bs);
+  }
 `;

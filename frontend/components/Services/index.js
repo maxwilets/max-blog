@@ -29,6 +29,17 @@ export default function Services() {
         </span>
         <p className="connectHeader">SERVICES</p>
       </section>
+      <section className="servicesBody">
+        <div className="servicesCard">
+          <h4>Web Development</h4>
+        </div>
+        <div className="servicesCard">
+          <h4>SEO and Paid Search Services</h4>
+        </div>
+        <div className="servicesCard">
+          <h4>Tutoring</h4>
+        </div>
+      </section>
     </ServicesStyles>
   );
 }
