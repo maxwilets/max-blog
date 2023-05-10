@@ -7,7 +7,7 @@ import School from './School';
 
 export const ALL_SCHOOLS_QUERY = gql`
   query ALL_SCHOOLS_QUERY {
-    allEducations {
+    educations {
       id
       name
       location
@@ -28,7 +28,7 @@ export default function Eductation() {
   const { data, loading, error } = useQuery(ALL_SCHOOLS_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
-  const { allEducations: schools } = data;
+  const { educations: schools } = data;
   return (
     <EductationStyles>
       <H3Style>Education</H3Style>

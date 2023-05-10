@@ -63,14 +63,14 @@ const GlobalStyles = createGlobalStyle`
   p { font-weight: 300; }
   li { font-weight: 300;}
 
-    .imageConatiner {
+  .imageConatiner {
     color: var(--gray);
     position: relative;
     display: inline-flex;
     vertical-align: middle;
     border: 2px solid var(--gray);
-    width: 4rem;
-    height: 4rem;
+    width: 4.6rem;
+    height: 4.6rem;
     border-radius: 50%;
   }
   .connectHeader {
@@ -89,6 +89,20 @@ const GlobalStyles = createGlobalStyle`
       right: 0;
       height: 1px;
       background-color: var(--lightGray);
+    }
+  }
+
+  .btn {
+    background-color: var(--gray);
+    color: var(--offWhite);
+    display: inline-block;
+    text-decoration: none;
+    padding: 7.5px 12.5px;
+    svg {
+      height: 24px;
+      width: 24px;
+      vertical-align: middle;
+      margin-right: 10px;
     }
   }
 `;

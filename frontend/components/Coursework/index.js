@@ -7,7 +7,7 @@ import Course from './Course';
 
 export const ALL_COURSEWORK_QUERY = gql`
   query ALL_COURSEWORK_QUERY {
-    allCourseworks {
+    courseworks {
       id
       name
       course
@@ -29,14 +29,14 @@ export default function Coursework() {
   const { data, loading, error } = useQuery(ALL_COURSEWORK_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
-  const { allCourseworks: courses } = data;
+  const { courseworks: courses } = data;
   console.log(data);
   // const { allCourseworks } = data;
   return (
     <CourseworkStyles>
       <H3Style>Recent Coursework</H3Style>
       {courses.map((course) => (
-        <Course course={course} />
+        <Course key={course.id} course={course} />
       ))}
     </CourseworkStyles>
   );

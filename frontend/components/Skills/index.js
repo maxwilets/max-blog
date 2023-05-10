@@ -7,10 +7,10 @@ import Skill from '../Skill';
 
 export const ALL_SKILLS_QUERY = gql`
   query ALL_SKILLS_QUERY {
-    allSkills(sortBy: level_DESC) {
+    skills(orderBy: { level: desc }) {
       id
-      skillName
       level
+      skillName
     }
   }
 `;
@@ -19,12 +19,12 @@ export default function Skills() {
   const { data, error, loading } = useQuery(ALL_SKILLS_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
-  const { allSkills } = data;
-  console.log(allSkills);
+  const { skills } = data;
+
   return (
     <>
       <H3Style>Skills</H3Style>
-      {allSkills.map((skill) => (
+      {skills.map((skill) => (
         <Skill key={skill.id} skill={skill} />
       ))}
     </>

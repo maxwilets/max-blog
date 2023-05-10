@@ -16,6 +16,7 @@ import { CourseImage } from './schemas/CourseImage';
 import { SchoolLogo } from './schemas/SchoolLogo';
 import { Portfolio } from './schemas/Portfolio';
 import { Technology } from './schemas/Technologies';
+import { Blog } from './schemas/Blog';
 
 const databaseUrl =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-sick-fits-tutorial';

@@ -13,7 +13,7 @@ import Coursework from '../Coursework';
 
 export const ALL_JOBS_QUERY = gql`
   query ALL_JOBS_QUERY {
-    allResumes(sortBy: startYear_DESC) {
+    resumes(orderBy: { startYear: desc }) {
       id
       title
       company
@@ -33,8 +33,7 @@ export default function Resume() {
   const { data, error, loading } = useQuery(ALL_JOBS_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
-  const { allResumes } = data;
-  console.log(allResumes);
+  const { resumes } = data;
 
   return (
     <>
@@ -48,7 +47,7 @@ export default function Resume() {
               <Briefcase />
             </span>
           </section>
-          {allResumes.map((resume) => (
+          {resumes.map((resume) => (
             <JobWrapper key={resume.id}>
               <YearSpacer
                 years={resume.endYear ? resume.endYear : resume.startYear}

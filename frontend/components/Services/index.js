@@ -1,6 +1,26 @@
 import { ServicesStyles } from './styles';
 
 export default function Services() {
+  const emailLogo = (
+    <svg
+      data-v-21b89265=""
+      aria-hidden="true"
+      focusable="false"
+      data-prefix="fal"
+      data-icon="envelope"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      className="svg-inline--fa fa-envelope fa-w-16 fa-2x"
+    >
+      <path
+        data-v-21b89265=""
+        fill="currentColor"
+        d="M464 64H48C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM48 96h416c8.8 0 16 7.2 16 16v41.4c-21.9 18.5-53.2 44-150.6 121.3-16.9 13.4-50.2 45.7-73.4 45.3-23.2.4-56.6-31.9-73.4-45.3C85.2 197.4 53.9 171.9 32 153.4V112c0-8.8 7.2-16 16-16zm416 320H48c-8.8 0-16-7.2-16-16V195c22.8 18.7 58.8 47.6 130.7 104.7 20.5 16.4 56.7 52.5 93.3 52.3 36.4.3 72.3-35.5 93.3-52.3 71.9-57.1 107.9-86 130.7-104.7v205c0 8.8-7.2 16-16 16z"
+        className=""
+      />
+    </svg>
+  );
   return (
     <ServicesStyles>
       <section className="header">
@@ -12,17 +32,19 @@ export default function Services() {
             aria-hidden="true"
             focusable="false"
             data-prefix="fal"
-            data-icon="handshake"
+            width="36"
+            height="36"
+            data-icon="concierge-bell"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 640 512"
-            className="svg-inline--fa fa-handshake fa-w-20"
+            viewBox="0 -20 450 580"
+            className="svg-inline--fa fa-concierge-bell fa-w-16"
           >
             <path
               data-v-c28df9e2=""
               data-v-5708f968=""
               fill="currentColor"
-              d="M16 319.8c8.8 0 16-7.2 16-16s-7.2-16-16-16-16 7.2-16 16c0 8.9 7.2 16 16 16zM632 128l-113.5.2-51.2-49.9c-9.1-9.1-21.1-14.1-33.9-14.1h-101c-10.4 0-20.1 3.9-28.3 10-8.4-6.5-18.7-10.3-29.3-10.3h-69.5c-12.7 0-24.9 5.1-33.9 14.1l-50 50H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h56v191.9H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h56c17.6 0 31.8-14.2 31.9-31.7h33.2l81.5 78c29.8 24.1 71.8 23.4 101-.2l7.2 6.2c9.6 7.8 21.3 11.9 33.5 11.9 16 0 31.1-7 41.4-19.6l21.9-26.9c16.4 8.9 42.9 9 60-12l9.5-11.7c6.2-7.6 9.6-16.6 10.5-25.7h48.6c.1 17.5 14.4 31.7 31.9 31.7h56c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8h-56V160.2l56-.2c4.4 0 8-3.6 8-8v-16c-.1-4.5-3.7-8-8.1-8zM460.2 357.6l-9.5 11.7c-5.4 6.6-15.4 8.1-22.5 2.3l-17.8-14.4-41.5 51c-7.5 9.3-21 10.2-29.4 3.4l-30.6-26.1-10.4 12.8c-16.7 20.5-47 23.7-66.6 7.9L142 320.1H96V159.9h38.6l59.3-59.3c3-3 7.1-4.7 11.3-4.7h69.5c.9 2.2.3.7 1.1 2.9l-59 54.2c-28.2 25.9-29.6 69.2-4.2 96.9 14.3 15.6 58.6 39.3 96.9 4.2l22.8-20.9 125.6 101.9c6.8 5.6 7.8 15.7 2.3 22.5zm83.8-37.5h-57.2c-2.5-3.5-5.3-6.9-8.8-9.8l-121.9-99 28.4-26.1c6.5-6 7-16.1 1-22.6s-16.1-6.9-22.6-1l-75.1 68.8c-14.4 13.1-38.6 12-51.7-2.2-13.6-14.8-12.7-38 2.2-51.7l83.1-76.2c3-2.7 6.8-4.2 10.8-4.2h101c4.3 0 8.3 1.7 11.4 4.8l60.7 59.1H544v160.1zm80-32.2c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16c0-8.9-7.2-16-16-16z"
+              d="M504 416h-24v-64c0-118.31-91.79-214.96-208-223.19V96h40c4.42 0 8-3.58 8-8V72c0-4.42-3.58-8-8-8H200c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h40v32.81C123.79 137.04 32 233.69 32 352v64H8c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h496c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-56 0H64v-64c0-100.17 78.3-184.19 178.26-191.27 16.87-1.19 10.33-1.21 27.48 0C369.7 167.81 448 251.83 448 352v64z"
               className=""
             />
           </svg>
@@ -32,12 +54,45 @@ export default function Services() {
       <section className="servicesBody">
         <div className="servicesCard">
           <h4>Web Development</h4>
+          <p>
+            This is my main service. With 5+ years of experience I can help
+            building or optimizing websites
+          </p>
+          <a
+            href="mailto:mwilets@gmail.com?subject= Web Development Inquiry"
+            className="btn"
+          >
+            {emailLogo}
+            Web Development
+          </a>
         </div>
         <div className="servicesCard">
-          <h4>SEO and Paid Search Services</h4>
+          <h4>Marketing Services</h4>
+          <p>
+            I can audit and optimize SEO performance and create nad manage paid
+            search campaigns
+          </p>
+          <a
+            href="mailto:mwilets@gmail.com?subject= Marketing Inquiry"
+            className="btn"
+          >
+            {emailLogo}
+            Marketing
+          </a>
         </div>
         <div className="servicesCard">
           <h4>Tutoring</h4>
+          <p>
+            With 3 years experience teaching and tutoring for web development I
+            can tutor students or anyone curious about coding
+          </p>
+          <a
+            href="mailto:mwilets@gmail.com?subject= Tutoring Inquiry"
+            className="btn"
+          >
+            {emailLogo}
+            Tutoring
+          </a>
         </div>
       </section>
     </ServicesStyles>
