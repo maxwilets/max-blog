@@ -1,15 +1,20 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import Nav from './Nav';
+import { Devices } from './Devices';
 
 const Logo = styled.h1`
-  background: red;
+  background: var(--offWhite);
   font-size: 2.5rem;
   position: relative;
   z-index: 2;
   transform: skew(-7deg);
+
+  @media ${Devices.tablet} {
+    font-size: 1.5rem;
+  }
   a {
-    color: white;
+    color: var(--gray);
     text-decoration: none;
     text-transform: uppercase;
     padding: 0.5rem 1rem;

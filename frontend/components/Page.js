@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Header from './Header';
 import Footer from './footer';
 import Connect from './Connect';
+import { Devices } from './Devices';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -72,6 +73,8 @@ const GlobalStyles = createGlobalStyle`
     width: 4.6rem;
     height: 4.6rem;
     border-radius: 50%;
+
+    @media ${Devices.tablet} { text-align: center !important; display: block; margin:auto } 
   }
   .connectHeader {
     font-weight: 500;
@@ -81,6 +84,7 @@ const GlobalStyles = createGlobalStyle`
     display: inline-block;
     right: -1%;
     width: 95%;
+    @media ${Devices.tablet} { text-align: center; }
     &:after {
       position: absolute;
       content: '  ';
@@ -89,6 +93,8 @@ const GlobalStyles = createGlobalStyle`
       right: 0;
       height: 1px;
       background-color: var(--lightGray);
+
+      @media ${Devices.tablet} { display: none; }
     }
   }
 

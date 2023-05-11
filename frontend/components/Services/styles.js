@@ -8,6 +8,9 @@ export const ServicesStyles = styled.div`
   padding: 2rem 0 !important;
   .header {
     width: 100%;
+    @media ${Devices.tablet} {
+      text-align: center;
+    }
   }
 
   .servicesBody {

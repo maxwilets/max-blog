@@ -1,9 +1,18 @@
+import { Head } from 'next/document';
 import RoateWords from '../components/RoateWords';
 import Services from '../components/Services';
 
 export default function IndexPage() {
   return (
     <>
+      {/* <Head>
+        <title>Max Wilets | Web Developer</title>
+        <meta
+          name="description"
+          content="Max Wilets's portfolio home check out marketing and web services available"
+          key="desc"
+        />
+      </Head> */}
       <h1>
         <RoateWords />
       </h1>

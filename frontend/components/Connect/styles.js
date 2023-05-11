@@ -23,8 +23,7 @@ export const ConnectStyles = styled.div`
       line-height: 1em;
       display: inline-block;
       width: 46px;
-      box-shadow: 0 2px rgba(128, 5, 18, 1), -2px 0 rgba(121, 9, 35, 1),
-        2px 0 rgba(223, 113, 32, 1), 0 -2px 0 rgba(42, 26, 246, 1);
+      box-shadow: 0 2px #3a3a3a, -2px 0 #efefef, 2px 0 #e9e9e9, 0 -2px 0 #000;
       padding: 0.8rem;
       margin-bottom: 1rem;
     }
