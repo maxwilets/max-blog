@@ -36,6 +36,7 @@ export default function Portfolio() {
   const { portfolios: projects } = data;
   return (
     <>
+      <h1>Projects</h1>
       {projects.map((project) => (
         <Project key={project.id} projectData={project} />
       ))}

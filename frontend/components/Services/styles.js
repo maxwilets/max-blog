@@ -21,13 +21,8 @@ export const ServicesStyles = styled.div`
   }
 
   .servicesCard {
-    padding: 1rem;
     width: 30%;
     text-align: center;
-    background-color: var(--offWhite);
-    border: 1px solid var(--lightGray);
-    box-shadow: var(--bs);
-    margin-top: 2em;
 
     @media ${Devices.tablet} {
       width: 100%;

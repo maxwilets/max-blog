@@ -92,6 +92,14 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  .card {
+    background-color: var(--offWhite);
+    border: 1px solid var(--lightGray);
+    box-shadow: var(--bs);
+    margin-top: 2em;
+    padding: 1rem;
+  }
+
   .btn {
     background-color: var(--gray);
     color: var(--offWhite);

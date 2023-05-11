@@ -12,6 +12,7 @@ const NavStyles = styled.ul`
     display: flex;
     align-items: center;
     position: relative;
+    margin-right: 1rem;
     color: var(--offWhite);
     text-transform: uppercase;
     font-weight: 900;
@@ -20,9 +21,14 @@ const NavStyles = styled.ul`
     border: 0;
     cursor: pointer;
     border-radius: 5px;
+    text-decoration: none;
+    a {
+      text-decoration: none;
+    }
     @media (max-width: 700px) {
       font-size: 10px;
       padding: 0 10px;
+      margin-right: 0;
     }
     // &:before {
     //   content: '';
