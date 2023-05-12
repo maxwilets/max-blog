@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from './Header';
-import Footer from './footer';
+import Footer from './Footer';
 import Connect from './Connect';
 import { Devices } from './Devices';
 
