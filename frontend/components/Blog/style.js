@@ -1,10 +1,18 @@
 import styled from 'styled-components';
+import { Devices } from '../Devices';
 
 export const BlogStyle = styled.div`
   .cardContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    @media ${Devices.tablet} {
+      flex-direction: column;
+      .card {
+        max-width: 100% !important;
+      }
+    }
 
     .btn {
       margin-right: 1rem;
