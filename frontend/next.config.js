@@ -4,5 +4,5 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  compiler: { emotion: true },
+  compiler: { styledComponents: true },
 };
