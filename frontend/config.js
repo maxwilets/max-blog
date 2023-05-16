@@ -9,7 +9,7 @@ export const cors = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://maxwilets.io/:path*',
+        destination: 'https://sea-lion-app-vvkdr.ondigitalocean.app/:path*',
       },
     ];
   },
