@@ -39,7 +39,6 @@
     "waait": "^1.0.5"
   },
   "devDependencies": {
-    "@apollo/client": "^3.4.0",
     "@apollo/react-testing": "^4.0.0",
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
