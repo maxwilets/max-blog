@@ -8,7 +8,7 @@ export const cors = {
   async rewrites() {
     return [
       {
-        source: '/api/:path*',
+        source: '/api/graphql:path*',
         destination: 'https://sea-lion-app-vvkdr.ondigitalocean.app/:path*',
       },
     ];
