@@ -7,12 +7,10 @@ export default function RoateWords() {
 
   useEffect(() => {
     const interval = setInterval(
-      () => (
+      () =>
         activeIndex === 4
           ? updateActiveIndex(0)
-          : updateActiveIndex(activeIndex + 1),
-        updateInitialLoad(false)
-      ),
+          : (updateActiveIndex(activeIndex + 1), updateInitialLoad(false)),
       5000
     );
     return () => clearInterval(interval);
