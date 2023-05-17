@@ -31,6 +31,7 @@ export const ALL_JOBS_QUERY = gql`
 
 export default function Resume() {
   const { data, error, loading } = useQuery(ALL_JOBS_QUERY);
+  console.log(data);
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
   const { resumes } = data;
