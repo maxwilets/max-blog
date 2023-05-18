@@ -10,6 +10,7 @@ export default function Thumbnail({ post }) {
         {post.tags.map((tag) => (
           <a className="btn">{tag.name}</a>
         ))}
+
         <p>{post.summary}</p>
       </article>
     </a>
