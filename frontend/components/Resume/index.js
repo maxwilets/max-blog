@@ -1,15 +1,15 @@
-import gql from 'graphql-tag';
-import { useQuery } from '@apollo/client';
-import DisplayError from '../ErrorMessage';
-import H3Style from '../styles/Typography';
-import { JobWrapper, ResumeStyles } from './styles';
-import Job from '../Job';
-import YearSpacer from '../YearSpacer';
-import { Briefcase } from '../../icons/Briefcase';
-import Skills from '../Skills';
-import Eductation from '../Education';
-import { RightSection } from '../styles/RightSection';
-import Coursework from '../Coursework';
+import gql from "graphql-tag";
+import { useQuery } from "@apollo/client";
+import DisplayError from "../ErrorMessage";
+import H3Style from "../styles/Typography";
+import { JobWrapper, ResumeStyles } from "./styles";
+import Job from "../Job";
+import YearSpacer from "../YearSpacer";
+import { Briefcase } from "../../icons/Briefcase";
+import Skills from "../Skills";
+import Eductation from "../Education";
+import { RightSection } from "../styles/RightSection";
+import Coursework from "../Coursework";
 
 export const ALL_JOBS_QUERY = gql`
   query ALL_JOBS_QUERY {
@@ -31,7 +31,7 @@ export const ALL_JOBS_QUERY = gql`
 
 export default function Resume() {
   const { data, error, loading } = useQuery(ALL_JOBS_QUERY);
-  console.log(data);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <DisplayError error={error} />;
   const { resumes } = data;

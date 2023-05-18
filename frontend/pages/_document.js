@@ -1,10 +1,11 @@
 /* global __DEV__ */
-import { getDataFromTree } from '@apollo/client/react/ssr';
-import Document from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import { getDataFromTree } from "@apollo/client/react/ssr";
+import Document from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
+    // console.log(`hereis itall ${ctx.renderPage}`);
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -16,6 +17,7 @@ export default class MyDocument extends Document {
         });
       await getDataFromTree(<ctx.AppTree {...ctx.appProps} />);
       const initialProps = await Document.getInitialProps(ctx);
+      console.log(`this is inii ${initialProps.styles}`);
       return {
         ...initialProps,
         styles: (

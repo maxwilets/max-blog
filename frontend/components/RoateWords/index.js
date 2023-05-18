@@ -16,7 +16,6 @@ export default function RoateWords() {
     );
     return () => clearInterval(interval);
   }, [activeIndex]);
-  console.log(activeIndex);
   return (
     <RotateStyles>
       <span className="rotate-words">

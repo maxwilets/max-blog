@@ -1,5 +1,4 @@
 export default function School({ school }) {
-  console.log(school.photo[0].altText);
   return (
     <div className="schoolDiv">
       <h4>{school.title}</h4>
