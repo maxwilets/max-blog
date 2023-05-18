@@ -1,3 +1,4 @@
+/* global __DEV__ */
 import { ApolloProvider } from '@apollo/client';
 import NProgress from 'nprogress';
 import { Router, useRouter } from 'next/router';

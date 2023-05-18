@@ -1,3 +1,4 @@
+/* global __DEV__ */
 import { getDataFromTree } from '@apollo/client/react/ssr';
 import Document from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
