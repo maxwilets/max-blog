@@ -33,8 +33,6 @@ export default function Blog() {
       <section className="cardContainer">
         {posts.map((post) => (
           <Thumbnail post={post} />
-
-          // <DocumentRenderer document={post.content.document} />
         ))}
       </section>
     </BlogStyle>
