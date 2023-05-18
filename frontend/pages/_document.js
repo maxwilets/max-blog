@@ -4,7 +4,7 @@ import Document from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
-  static async getServerSideProps(ctx) {
+  static async getInitialProps(ctx) {
     // console.log(`hereis itall ${ctx.renderPage}`);
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
