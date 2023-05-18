@@ -1,25 +1,34 @@
-import Document, { Html, Head, NextScript, Main } from "next/document";
+/* global __DEV__ */
+import { getDataFromTree } from "@apollo/client/react/ssr";
+import Document from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
-  static getInitialProps({ renderPage }) {
+  static async getStaticlProps(ctx) {
+    // console.log(`hereis itall ${ctx.renderPage}`);
     const sheet = new ServerStyleSheet();
-    const page = renderPage(
-      (App) => (props) => sheet.collectStyles(<App {...props} />)
-    );
-    const styleTags = sheet.getStyleElement();
-    return { ...page, styleTags };
-  }
+    const originalRenderPage = ctx.renderPage;
 
-  render() {
-    return (
-      <Html lang="en-CA">
-        <Head />
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        });
+      await getDataFromTree(<ctx.AppTree {...ctx.appProps} />);
+      const initialProps = await Document.getInitialProps(ctx);
+      console.log(`this is inii ${initialProps.styles}`);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      };
+    } finally {
+      sheet.seal();
+    }
   }
 }
