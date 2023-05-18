@@ -1,10 +1,11 @@
-import { OpenLink } from '../../icons/OpenLink';
-import { PortfolioStyles } from './style';
+import { OpenLink } from "../../icons/OpenLink";
+import { PortfolioStyles } from "./style";
 
 export default function Project({ projectData }) {
   return (
     <PortfolioStyles>
-      <section className="sideBySide">
+      <h1>testing</h1>
+      {/* <section className="sideBySide">
         <section className="imageContainer">
           <img
             src={projectData.photo.image.publicUrlTransformed}
@@ -55,7 +56,7 @@ export default function Project({ projectData }) {
             <OpenLink />
           </a>
         ))}
-      </section>
+      </section> */}
     </PortfolioStyles>
   );
 }
