@@ -14,16 +14,16 @@ export default class MyDocument extends Document {
             sheet.collectStyles(<App {...props} />),
         });
       await getDataFromTree(<ctx.AppTree {...ctx.appProps} />);
-      // const initialProps = await Document.getInitialProps(ctx);
-      // return {
-      //   ...initialProps,
-      //   styles: (
-      //     <>
-      //       {initialProps.styles}
-      //       {sheet.getStyleElement()}
-      //     </>
-      //   ),
-      // };
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      };
     } finally {
       sheet.seal();
     }
