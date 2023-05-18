@@ -1,25 +1,26 @@
-import { useEffect, useState } from 'react';
-import { RotateStyles } from './styles';
+import { useEffect, useState } from "react";
+import { RotateStyles } from "./styles";
 
 export default function RoateWords() {
   const [activeIndex, updateActiveIndex] = useState(0);
   const [initialLoad, updateInitialLoad] = useState(true);
 
-  useEffect(() => {
-    console.log('effect being used');
-    const interval = setInterval(
-      () =>
-        activeIndex === 4
-          ? updateActiveIndex(0)
-          : (updateActiveIndex(activeIndex + 1), updateInitialLoad(false)),
-      5000
-    );
-    return () => clearInterval(interval);
-  }, [activeIndex]);
-  console.log(activeIndex);
+  // useEffect(() => {
+  //   console.log('effect being used');
+  //   const interval = setInterval(
+  //     () =>
+  //       activeIndex === 4
+  //         ? updateActiveIndex(0)
+  //         : (updateActiveIndex(activeIndex + 1), updateInitialLoad(false)),
+  //     5000
+  //   );
+  //   return () => clearInterval(interval);
+  // }, [activeIndex]);
+  // console.log(activeIndex);
   return (
     <RotateStyles>
-      <span className="rotate-words">
+      <h1>Does this fix the error</h1>
+      {/* <span className="rotate-words">
         Hi. I'm&nbsp;
         <span
           className={
@@ -91,7 +92,7 @@ export default function RoateWords() {
       </span>
       <br />
       I live in Chicago, IL
-      <br />I love to learn and code.
+      <br />I love to learn and code. */}
     </RotateStyles>
   );
 }
