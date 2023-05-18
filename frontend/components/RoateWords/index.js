@@ -7,6 +7,7 @@ export default function RoateWords() {
 
   useEffect(() => {
     console.log('effect being used');
+    clearInterval(interval);
     const interval = setInterval(
       () =>
         activeIndex === 4
@@ -14,7 +15,6 @@ export default function RoateWords() {
           : (updateActiveIndex(activeIndex + 1), updateInitialLoad(false)),
       5000
     );
-    return () => clearInterval(interval);
   }, [activeIndex]);
   return (
     <RotateStyles>
