@@ -7,14 +7,17 @@ export default function RoateWords() {
 
   useEffect(() => {
     console.log('effect being used');
-    const interval = setInterval(
-      () =>
-        activeIndex === 4
-          ? updateActiveIndex(0)
-          : (updateActiveIndex(activeIndex + 1), updateInitialLoad(false)),
-      5000
-    );
-    return () => clearInterval(interval);
+    const timer = async () => {
+      const interval = await setInterval(
+        () =>
+          activeIndex === 4
+            ? updateActiveIndex(0)
+            : (updateActiveIndex(activeIndex + 1), updateInitialLoad(false)),
+        5000
+      );
+      return () => clearInterval(interval);
+    };
+    timer();
   }, [activeIndex]);
   return (
     <RotateStyles>
