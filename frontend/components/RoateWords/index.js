@@ -6,6 +6,7 @@ export default function RoateWords() {
   const [initialLoad, updateInitialLoad] = useState(true);
 
   useEffect(() => {
+    console.log('effect being used');
     const interval = setInterval(
       () =>
         activeIndex === 4
