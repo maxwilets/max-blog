@@ -5,35 +5,34 @@ export default function RoateWords() {
   const [activeIndex, updateActiveIndex] = useState(0);
   const [initialLoad, updateInitialLoad] = useState(true);
 
-  // useEffect(() => {
-  //   console.log('effect being used');
-  //   const interval = setInterval(
-  //     () =>
-  //       activeIndex === 4
-  //         ? updateActiveIndex(0)
-  //         : (updateActiveIndex(activeIndex + 1), updateInitialLoad(false)),
-  //     5000
-  //   );
-  //   return () => clearInterval(interval);
-  // }, [activeIndex]);
-  // console.log(activeIndex);
+  useEffect(() => {
+    console.log("effect being used");
+    const interval = setInterval(
+      () =>
+        activeIndex === 4
+          ? updateActiveIndex(0)
+          : (updateActiveIndex(activeIndex + 1), updateInitialLoad(false)),
+      5000
+    );
+    return () => clearInterval(interval);
+  }, [activeIndex]);
+  console.log(activeIndex);
   return (
     <RotateStyles>
-      <h1>Does this fix the error</h1>
-      {/* <span className="rotate-words">
+      <span className="rotate-words">
         Hi. I'm&nbsp;
         <span
           className={
             // double tertiary to check state to add active
             // fading or no class for animation
             activeIndex === 0
-              ? 'active'
+              ? "active"
               : activeIndex === 1 && !initialLoad
-              ? 'fading'
+              ? "fading"
               : null
           }
         >
-          {' '}
+          {" "}
           a front end engineer
         </span>
         <span
@@ -41,13 +40,13 @@ export default function RoateWords() {
             // double tertiary to check state to add active
             // fading or no class for animation
             activeIndex === 1
-              ? 'active'
+              ? "active"
               : activeIndex === 2 && !initialLoad
-              ? 'fading'
+              ? "fading"
               : null
           }
         >
-          {' '}
+          {" "}
           a software engineer
         </span>
         <span
@@ -55,13 +54,13 @@ export default function RoateWords() {
             // double tertiary to check state to add active
             // fading or no class for animation
             activeIndex === 2
-              ? 'active'
+              ? "active"
               : activeIndex === 3 && !initialLoad
-              ? 'fading'
+              ? "fading"
               : null
           }
         >
-          {' '}
+          {" "}
           a coding educator
         </span>
         <span
@@ -69,9 +68,9 @@ export default function RoateWords() {
             // double tertiary to check state to add active
             // fading or no class for animation
             activeIndex === 3
-              ? 'active'
+              ? "active"
               : activeIndex === 4 && !initialLoad
-              ? 'fading'
+              ? "fading"
               : null
           }
         >
@@ -80,19 +79,19 @@ export default function RoateWords() {
         <span
           className={
             activeIndex === 4
-              ? 'active'
+              ? "active"
               : activeIndex === 0 && !initialLoad
-              ? 'fading'
+              ? "fading"
               : null
           }
         >
-          {' '}
+          {" "}
           a passionate learner
         </span>
       </span>
       <br />
       I live in Chicago, IL
-      <br />I love to learn and code. */}
+      <br />I love to learn and code.
     </RotateStyles>
   );
 }
