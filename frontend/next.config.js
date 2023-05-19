@@ -1,10 +1,9 @@
 module.exports = {
-  reactStrictMode: false,
+  reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: { ignoreBuildErrors: true },
-  compiler: { styledComponents: true },
 };
 
 // Injected content via Sentry wizard below

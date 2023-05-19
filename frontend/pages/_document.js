@@ -1,3 +1,4 @@
+import { getDataFromTree } from "@apollo/client/react/ssr";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
@@ -12,8 +13,9 @@ export default class MyDocument extends Document {
           enhanceApp: (App) => (props) =>
             sheet.collectStyles(<App {...props} />),
         });
-
+      await getDataFromTree(<ctx.AppTree {...ctx.appTreeProps} />);
       const initialProps = await Document.getInitialProps(ctx);
+      console.log(initialProps);
       return {
         ...initialProps,
         styles: (
